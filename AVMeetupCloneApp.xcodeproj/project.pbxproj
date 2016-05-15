@@ -9,23 +9,44 @@
 /* Begin PBXBuildFile section */
 		D92389311CE7806E001B1B1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D92389301CE7806E001B1B1B /* main.m */; };
 		D92389341CE7806E001B1B1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D92389331CE7806E001B1B1B /* AppDelegate.m */; };
-		D92389371CE7806E001B1B1B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D92389361CE7806E001B1B1B /* ViewController.m */; };
 		D923893A1CE7806E001B1B1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D92389381CE7806E001B1B1B /* Main.storyboard */; };
 		D923893C1CE7806E001B1B1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D923893B1CE7806E001B1B1B /* Assets.xcassets */; };
 		D923893F1CE7806E001B1B1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D923893D1CE7806E001B1B1B /* LaunchScreen.storyboard */; };
+		D92389481CE7810F001B1B1B /* AVMeetupObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D92389471CE7810F001B1B1B /* AVMeetupObject.m */; };
+		D923894D1CE78CC7001B1B1B /* AVEventsNetworkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D923894C1CE78CC7001B1B1B /* AVEventsNetworkModel.m */; };
+		D92389501CE79727001B1B1B /* AVEventsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D923894F1CE79727001B1B1B /* AVEventsCollectionViewController.m */; };
+		D92389531CE79754001B1B1B /* AVEventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D92389521CE79754001B1B1B /* AVEventDetailViewController.m */; };
+		D92389561CE79CD1001B1B1B /* AVAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D92389551CE79CD1001B1B1B /* AVAPIManager.m */; };
+		D923895B1CE7E6B6001B1B1B /* AVEventsCustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D92389591CE7E6B6001B1B1B /* AVEventsCustomCollectionViewCell.m */; };
+		D923895C1CE7E6B6001B1B1B /* AVEventsCustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D923895A1CE7E6B6001B1B1B /* AVEventsCustomCollectionViewCell.xib */; };
+		FB21F0BC37E45D8BD30A3E12 /* libPods-AVMeetupCloneApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 104535B625B35D432195F537 /* libPods-AVMeetupCloneApp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		104535B625B35D432195F537 /* libPods-AVMeetupCloneApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AVMeetupCloneApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF43DEE043095934858E487B /* Pods-AVMeetupCloneApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVMeetupCloneApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-AVMeetupCloneApp/Pods-AVMeetupCloneApp.release.xcconfig"; sourceTree = "<group>"; };
+		D78FF20F5A0C3B3E6E429B2F /* Pods-AVMeetupCloneApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVMeetupCloneApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AVMeetupCloneApp/Pods-AVMeetupCloneApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D923892C1CE7806E001B1B1B /* AVMeetupCloneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVMeetupCloneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D92389301CE7806E001B1B1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D92389321CE7806E001B1B1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D92389331CE7806E001B1B1B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D92389351CE7806E001B1B1B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D92389361CE7806E001B1B1B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D92389391CE7806E001B1B1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D923893B1CE7806E001B1B1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D923893E1CE7806E001B1B1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D92389401CE7806E001B1B1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D92389461CE7810F001B1B1B /* AVMeetupObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVMeetupObject.h; sourceTree = "<group>"; };
+		D92389471CE7810F001B1B1B /* AVMeetupObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVMeetupObject.m; sourceTree = "<group>"; };
+		D923894B1CE78CC7001B1B1B /* AVEventsNetworkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVEventsNetworkModel.h; sourceTree = "<group>"; };
+		D923894C1CE78CC7001B1B1B /* AVEventsNetworkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVEventsNetworkModel.m; sourceTree = "<group>"; };
+		D923894E1CE79727001B1B1B /* AVEventsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVEventsCollectionViewController.h; sourceTree = "<group>"; };
+		D923894F1CE79727001B1B1B /* AVEventsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVEventsCollectionViewController.m; sourceTree = "<group>"; };
+		D92389511CE79754001B1B1B /* AVEventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVEventDetailViewController.h; sourceTree = "<group>"; };
+		D92389521CE79754001B1B1B /* AVEventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVEventDetailViewController.m; sourceTree = "<group>"; };
+		D92389541CE79CD1001B1B1B /* AVAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVAPIManager.h; sourceTree = "<group>"; };
+		D92389551CE79CD1001B1B1B /* AVAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVAPIManager.m; sourceTree = "<group>"; };
+		D92389581CE7E6B6001B1B1B /* AVEventsCustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVEventsCustomCollectionViewCell.h; sourceTree = "<group>"; };
+		D92389591CE7E6B6001B1B1B /* AVEventsCustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVEventsCustomCollectionViewCell.m; sourceTree = "<group>"; };
+		D923895A1CE7E6B6001B1B1B /* AVEventsCustomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVEventsCustomCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +54,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB21F0BC37E45D8BD30A3E12 /* libPods-AVMeetupCloneApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08A6F117D6D24A26E653B5BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				104535B625B35D432195F537 /* libPods-AVMeetupCloneApp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDC96D82A544680C0062C0D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D78FF20F5A0C3B3E6E429B2F /* Pods-AVMeetupCloneApp.debug.xcconfig */,
+				AF43DEE043095934858E487B /* Pods-AVMeetupCloneApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D92389231CE7806E001B1B1B = {
 			isa = PBXGroup;
 			children = (
 				D923892E1CE7806E001B1B1B /* AVMeetupCloneApp */,
 				D923892D1CE7806E001B1B1B /* Products */,
+				CDC96D82A544680C0062C0D2 /* Pods */,
+				08A6F117D6D24A26E653B5BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +101,10 @@
 			children = (
 				D92389321CE7806E001B1B1B /* AppDelegate.h */,
 				D92389331CE7806E001B1B1B /* AppDelegate.m */,
-				D92389351CE7806E001B1B1B /* ViewController.h */,
-				D92389361CE7806E001B1B1B /* ViewController.m */,
+				D92389491CE78115001B1B1B /* Model */,
+				D92389571CE79E4B001B1B1B /* Networking */,
+				D923895D1CE7E6CB001B1B1B /* Views */,
+				D923894A1CE78124001B1B1B /* ViewControllers */,
 				D92389381CE7806E001B1B1B /* Main.storyboard */,
 				D923893B1CE7806E001B1B1B /* Assets.xcassets */,
 				D923893D1CE7806E001B1B1B /* LaunchScreen.storyboard */,
@@ -79,6 +122,47 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D92389491CE78115001B1B1B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D92389461CE7810F001B1B1B /* AVMeetupObject.h */,
+				D92389471CE7810F001B1B1B /* AVMeetupObject.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D923894A1CE78124001B1B1B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D923894E1CE79727001B1B1B /* AVEventsCollectionViewController.h */,
+				D923894F1CE79727001B1B1B /* AVEventsCollectionViewController.m */,
+				D92389511CE79754001B1B1B /* AVEventDetailViewController.h */,
+				D92389521CE79754001B1B1B /* AVEventDetailViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D92389571CE79E4B001B1B1B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D92389541CE79CD1001B1B1B /* AVAPIManager.h */,
+				D92389551CE79CD1001B1B1B /* AVAPIManager.m */,
+				D923894B1CE78CC7001B1B1B /* AVEventsNetworkModel.h */,
+				D923894C1CE78CC7001B1B1B /* AVEventsNetworkModel.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		D923895D1CE7E6CB001B1B1B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D92389581CE7E6B6001B1B1B /* AVEventsCustomCollectionViewCell.h */,
+				D92389591CE7E6B6001B1B1B /* AVEventsCustomCollectionViewCell.m */,
+				D923895A1CE7E6B6001B1B1B /* AVEventsCustomCollectionViewCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +170,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D92389431CE7806E001B1B1B /* Build configuration list for PBXNativeTarget "AVMeetupCloneApp" */;
 			buildPhases = (
+				4AC9F651C1225E8C48A6A32A /* 📦 Check Pods Manifest.lock */,
 				D92389281CE7806E001B1B1B /* Sources */,
 				D92389291CE7806E001B1B1B /* Frameworks */,
 				D923892A1CE7806E001B1B1B /* Resources */,
+				5E243AF4E8F8EE644C8AF75B /* 📦 Embed Pods Frameworks */,
+				85A1E501BA5FE177BB123193 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -110,6 +197,7 @@
 				TargetAttributes = {
 					D923892B1CE7806E001B1B1B = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = N48NM3R37Q;
 					};
 				};
 			};
@@ -139,19 +227,73 @@
 				D923893F1CE7806E001B1B1B /* LaunchScreen.storyboard in Resources */,
 				D923893C1CE7806E001B1B1B /* Assets.xcassets in Resources */,
 				D923893A1CE7806E001B1B1B /* Main.storyboard in Resources */,
+				D923895C1CE7E6B6001B1B1B /* AVEventsCustomCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4AC9F651C1225E8C48A6A32A /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5E243AF4E8F8EE644C8AF75B /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AVMeetupCloneApp/Pods-AVMeetupCloneApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85A1E501BA5FE177BB123193 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AVMeetupCloneApp/Pods-AVMeetupCloneApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D92389281CE7806E001B1B1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D92389371CE7806E001B1B1B /* ViewController.m in Sources */,
+				D92389561CE79CD1001B1B1B /* AVAPIManager.m in Sources */,
+				D92389501CE79727001B1B1B /* AVEventsCollectionViewController.m in Sources */,
+				D92389531CE79754001B1B1B /* AVEventDetailViewController.m in Sources */,
+				D92389481CE7810F001B1B1B /* AVMeetupObject.m in Sources */,
 				D92389341CE7806E001B1B1B /* AppDelegate.m in Sources */,
+				D923894D1CE78CC7001B1B1B /* AVEventsNetworkModel.m in Sources */,
 				D92389311CE7806E001B1B1B /* main.m in Sources */,
+				D923895B1CE7E6B6001B1B1B /* AVEventsCustomCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,23 +405,31 @@
 		};
 		D92389441CE7806E001B1B1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D78FF20F5A0C3B3E6E429B2F /* Pods-AVMeetupCloneApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AVMeetupCloneApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ayunavogel.AVMeetupCloneApp.AVMeetupCloneApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		D92389451CE7806E001B1B1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF43DEE043095934858E487B /* Pods-AVMeetupCloneApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AVMeetupCloneApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ayunavogel.AVMeetupCloneApp.AVMeetupCloneApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -302,6 +452,7 @@
 				D92389451CE7806E001B1B1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

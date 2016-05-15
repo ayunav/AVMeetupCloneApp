@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  AVEventsCollectionViewController.h
 //  AVMeetupCloneApp
 //
 //  Created by Ayuna NYC on 5/14/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface AVEventsCollectionViewController : UICollectionViewController
 
 @end
-
