@@ -11,8 +11,7 @@
 @interface AVEventsCustomCollectionViewCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *meetupImageView;
-
 @property (weak, nonatomic) IBOutlet UILabel *meetupGroupNameTextLabel;
-
 @property (weak, nonatomic) IBOutlet UILabel *meetupNumberOfMembersTextLabel;
+
 @end

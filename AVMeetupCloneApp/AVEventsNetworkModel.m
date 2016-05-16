@@ -23,17 +23,21 @@
     
     [AVAPIManager getOpenEventsJSON:^(id json, NSError *error) {
         
-        for (NSDictionary *dictionary in json) {
+        NSArray *results = [json valueForKey:@"results"];
+        
+        for (NSDictionary *dictionary in results) {
             
             AVMeetupGroup *group = [[AVMeetupGroup alloc] init];
             
-            NSString *groupName = dictionary[@"results"][@"group"][@"name"];
-            NSURL *groupPhotoURL = dictionary[@"results"][@"group"][@"group_photo"][@"photo_link"];
-            NSString *groupMembersNickname = dictionary[@"results"][@"group"][@"who"];
+            NSString *groupName = dictionary[@"group"][@"name"];
+            NSURL *groupPhotoURL = dictionary[@"group"][@"group_photo"][@"photo_link"];
+            NSString *groupMembersNickname = dictionary[@"group"][@"who"];
             
             group.name = groupName;
             group.photoURL = groupPhotoURL;
             group.membersNickname = groupMembersNickname;
+            
+//            NSLog(@"%@, %@, %@ ", group.name, group.photoURL, group.membersNickname); 
             
             [self.groups addObject:group];
     }

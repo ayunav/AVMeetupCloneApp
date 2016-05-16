@@ -8,10 +8,11 @@
 
 #import "AVEventsCollectionViewController.h"
 #import "AVEventsCustomCollectionViewCell.h"
+#import "AVEventsNetworkModel.h"
 
 @interface AVEventsCollectionViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
-@property (nonatomic, strong) NSArray *meetups;
+@property (nonatomic, strong) NSArray<AVMeetupGroup *> *meetups;
 @property (nonatomic, strong) NSArray<NSDictionary *> *meetupDictsArray;
 
 @end
@@ -23,12 +24,21 @@ static NSString * const reuseIdentifier = @"AVEventsCustomCollectionViewCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    AVEventsNetworkModel *networkModel = [[AVEventsNetworkModel alloc] init];
+    
+    [networkModel fetchEvents:^(NSMutableArray<AVMeetupGroup *> *groups) {
+        
+        self.meetups = groups;
+        
+    }];
+     
+    
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    UINib *eventsCellNib = [UINib nibWithNibName:@"AVEventsCustomCollectionViewCell" bundle:nil];
-    [self.collectionView registerNib:eventsCellNib forCellWithReuseIdentifier:reuseIdentifier];
+//    UINib *eventsCellNib = [UINib nibWithNibName:@"AVEventsCustomCollectionViewCell" bundle:nil];
+//    [self.collectionView registerNib:eventsCellNib forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
 }
@@ -76,13 +86,17 @@ static NSString * const reuseIdentifier = @"AVEventsCustomCollectionViewCell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 20;
+    return self.meetups.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    // Configure the cell
+    AVEventsCustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    
+    AVMeetupGroup *group = self.meetups[indexPath.row];
+
+    [cell.meetupGroupNameTextLabel setText:group.name];
+//    .text = group.name;
     
     return cell;
 }
