@@ -12,7 +12,9 @@
 
 #define API_DATA_URL @"https://api.meetup.com/2/open_events?&sign=true&photo-host=public&zip=11222&fields=group_photo&page=20&offset=0&key=4131436d16334b6c5f3c2b4630685a29"
 
+
 @implementation AVAPIManager
+
 
 + (AVAPIManager *)sharedAPIManager {
    
@@ -25,6 +27,7 @@
     return sharedAPIManager;
     
 }
+
 
 + (void)getOpenEventsJSON:(void(^)(id json, NSError *error))completionHandler {
     
@@ -52,5 +55,6 @@
          }];
     
 }
+
 
 @end

@@ -10,8 +10,8 @@
 
 @interface AVMeetupGroup : NSObject
 
-@property (nonatomic, strong) NSString *meetupGroupName;
-@property (nonatomic, strong) NSString *meetupGroupPhotoURL;
-@property (nonatomic, strong) NSString *meetupGroupMembersNickname;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSURL *photoURL;
+@property (nonatomic, strong) NSString *membersNickname;
 
 @end
