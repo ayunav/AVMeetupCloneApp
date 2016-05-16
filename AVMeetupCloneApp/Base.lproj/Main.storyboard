@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xwy-YM-oI0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_7302" translatesAutoresizingMaskIntoConstraints="NO" id="xwy-YM-oI0">
                                 <rect key="frame" x="0.0" y="64" width="600" height="260"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Epq-hI-6RH">
@@ -182,4 +182,7 @@
             <point key="canvasLocation" x="467" y="289"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="IMG_7302" width="2448" height="3264"/>
+    </resources>
 </document>

@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+#import "AVAPIManager.h"
 
 @interface AVEventsNetworkModel : NSObject
 
-- (void)fetchEventsData:(void (^)())completion;
+- (void)fetchEventsData;
 
 
 @end

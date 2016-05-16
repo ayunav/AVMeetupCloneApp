@@ -11,8 +11,10 @@
 
 @implementation AVEventsNetworkModel
 
-- (void)fetchEventsData:(void (^)())completion {
+- (void)fetchEventsData {
     
+    AVAPIManager *apiManager = [[AVAPIManager alloc] init];
+
 }
 
 @end
