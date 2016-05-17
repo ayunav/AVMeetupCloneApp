@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AVEventsCollectionViewController : UICollectionViewController
+@interface AVEventsCollectionViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+
 
 @end

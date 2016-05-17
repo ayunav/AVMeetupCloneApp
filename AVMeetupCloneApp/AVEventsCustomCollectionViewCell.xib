@@ -3,60 +3,92 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AVEventsCustomCollectionViewCell" id="gTV-IL-0wX" customClass="AVEventsCustomCollectionViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+            <rect key="frame" x="0.0" y="0.0" width="279" height="316"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                <rect key="frame" x="0.0" y="0.0" width="279" height="316"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_7302" translatesAutoresizingMaskIntoConstraints="NO" id="wfm-k3-rYI" userLabel="Meetup Image View">
-                        <rect key="frame" x="0.0" y="0.0" width="200" height="156"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2Z-EH-R06" userLabel="Meetup No. of Members Label">
-                        <rect key="frame" x="8" y="164" width="184" height="36"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ba-5M-otT" userLabel="Image and Meetup Name Container View">
+                        <rect key="frame" x="0.0" y="0.0" width="279" height="280"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_7302" translatesAutoresizingMaskIntoConstraints="NO" id="wfm-k3-rYI" userLabel="Meetup Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="279" height="280"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gq-st-91C" userLabel="Meetup Group Name Label">
+                                <rect key="frame" x="8" y="248.5" width="263" height="20.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="36" id="nIS-R9-TNS"/>
+                            <constraint firstAttribute="trailing" secondItem="wfm-k3-rYI" secondAttribute="trailing" id="1qz-An-ndw"/>
+                            <constraint firstAttribute="bottom" secondItem="8gq-st-91C" secondAttribute="bottom" constant="3" id="5od-aN-qKr"/>
+                            <constraint firstAttribute="trailing" secondItem="8gq-st-91C" secondAttribute="trailing" constant="8" id="PQj-KW-I9a"/>
+                            <constraint firstItem="wfm-k3-rYI" firstAttribute="top" secondItem="9ba-5M-otT" secondAttribute="top" id="RMj-uH-gQD"/>
+                            <constraint firstAttribute="bottom" secondItem="wfm-k3-rYI" secondAttribute="bottom" id="UIb-d0-ZuL"/>
+                            <constraint firstAttribute="bottom" secondItem="wfm-k3-rYI" secondAttribute="bottom" id="Us6-bG-CMl"/>
+                            <constraint firstItem="8gq-st-91C" firstAttribute="leading" secondItem="9ba-5M-otT" secondAttribute="leading" constant="8" id="awX-Uh-Tn3"/>
+                            <constraint firstAttribute="bottom" secondItem="wfm-k3-rYI" secondAttribute="bottom" id="i4N-r2-K0H"/>
+                            <constraint firstAttribute="bottom" secondItem="wfm-k3-rYI" secondAttribute="bottom" id="kRg-eR-YhG"/>
+                            <constraint firstItem="wfm-k3-rYI" firstAttribute="leading" secondItem="9ba-5M-otT" secondAttribute="leading" id="voc-zu-XsU"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gq-st-91C" userLabel="Meetup Group Name Label">
-                        <rect key="frame" x="8" y="111" width="184" height="42"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="UIb-d0-ZuL"/>
+                                <exclude reference="Us6-bG-CMl"/>
+                                <exclude reference="kRg-eR-YhG"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5P-0u-Pgl" userLabel="Members Name Container View">
+                        <rect key="frame" x="0.0" y="280" width="279" height="36"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200 Happy Coders " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2Z-EH-R06" userLabel="Meetup No. of Members Label">
+                                <rect key="frame" x="8" y="0.0" width="263" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="zu4-5E-nmg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="42" id="qUb-pw-JMy"/>
+                            <constraint firstItem="b2Z-EH-R06" firstAttribute="leading" secondItem="M5P-0u-Pgl" secondAttribute="leading" constant="8" id="COL-08-eV6"/>
+                            <constraint firstAttribute="trailing" secondItem="b2Z-EH-R06" secondAttribute="trailing" constant="8" id="Ekb-P3-5G9"/>
+                            <constraint firstAttribute="height" constant="36" id="FI6-cF-Lw1"/>
+                            <constraint firstAttribute="bottom" secondItem="b2Z-EH-R06" secondAttribute="bottom" id="Sdp-QG-3QE"/>
+                            <constraint firstItem="b2Z-EH-R06" firstAttribute="top" secondItem="M5P-0u-Pgl" secondAttribute="top" id="WGw-9Y-YHF"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
-                <constraint firstItem="wfm-k3-rYI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="3dQ-aQ-Ubn"/>
-                <constraint firstItem="wfm-k3-rYI" firstAttribute="centerX" secondItem="8gq-st-91C" secondAttribute="centerX" id="8YF-jI-IOb"/>
-                <constraint firstItem="b2Z-EH-R06" firstAttribute="top" secondItem="wfm-k3-rYI" secondAttribute="bottom" constant="8" symbolic="YES" id="CyQ-pS-BFt"/>
-                <constraint firstItem="8gq-st-91C" firstAttribute="leading" secondItem="b2Z-EH-R06" secondAttribute="leading" id="DjL-Fb-BBp"/>
-                <constraint firstAttribute="bottom" secondItem="b2Z-EH-R06" secondAttribute="bottom" id="KQl-W0-8Zv"/>
-                <constraint firstItem="8gq-st-91C" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="NuC-fg-EXO"/>
-                <constraint firstItem="wfm-k3-rYI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Uvl-q4-i4A"/>
-                <constraint firstAttribute="trailing" secondItem="wfm-k3-rYI" secondAttribute="trailing" id="cJP-n5-x9b"/>
-                <constraint firstItem="b2Z-EH-R06" firstAttribute="top" secondItem="8gq-st-91C" secondAttribute="bottom" constant="11" id="ff1-Lx-QPu"/>
-                <constraint firstItem="8gq-st-91C" firstAttribute="trailing" secondItem="b2Z-EH-R06" secondAttribute="trailing" id="pYX-x5-4ce"/>
+                <constraint firstItem="9ba-5M-otT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="53D-o4-cgW"/>
+                <constraint firstItem="M5P-0u-Pgl" firstAttribute="top" secondItem="9ba-5M-otT" secondAttribute="bottom" id="8xX-em-w4T"/>
+                <constraint firstAttribute="bottom" secondItem="M5P-0u-Pgl" secondAttribute="bottom" id="LDx-EP-1Py"/>
+                <constraint firstItem="9ba-5M-otT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="UEl-YZ-bwa"/>
+                <constraint firstItem="M5P-0u-Pgl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="krJ-Wl-6yV"/>
+                <constraint firstAttribute="trailing" secondItem="9ba-5M-otT" secondAttribute="trailing" id="lTW-GH-ns3"/>
+                <constraint firstAttribute="trailing" secondItem="M5P-0u-Pgl" secondAttribute="trailing" id="qPQ-gK-tF2"/>
             </constraints>
-            <size key="customSize" width="200" height="200"/>
+            <size key="customSize" width="279" height="316"/>
             <connections>
                 <outlet property="meetupGroupNameTextLabel" destination="8gq-st-91C" id="28r-MC-6hD"/>
                 <outlet property="meetupImageView" destination="wfm-k3-rYI" id="qE6-IS-m9P"/>
                 <outlet property="meetupNumberOfMembersTextLabel" destination="b2Z-EH-R06" id="e8T-po-DA3"/>
             </connections>
-            <point key="canvasLocation" x="400" y="430"/>
+            <point key="canvasLocation" x="324.5" y="331"/>
         </collectionViewCell>
     </objects>
     <resources>

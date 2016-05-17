@@ -10,8 +10,7 @@
 #import "AVEventsCustomCollectionViewCell.h"
 #import "AVEventsNetworkModel.h"
 
-@interface AVEventsCollectionViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
-
+@interface AVEventsCollectionViewController () 
 @property (nonatomic, strong) NSArray<AVMeetupGroup *> *meetups;
 @property (nonatomic, strong) NSArray<NSDictionary *> *meetupDictsArray;
 
@@ -24,23 +23,27 @@ static NSString * const reuseIdentifier = @"AVEventsCustomCollectionViewCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Uncomment the following line to preserve selection between presentations
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Register cell classes
+    [self.collectionView registerNib:[UINib nibWithNibName:@"AVEventsCustomCollectionViewCell" bundle:nil]
+          forCellWithReuseIdentifier:reuseIdentifier];
+    
+    // Do any additional setup after loading the view.
+
     AVEventsNetworkModel *networkModel = [[AVEventsNetworkModel alloc] init];
     
     [networkModel fetchEvents:^(NSMutableArray<AVMeetupGroup *> *groups) {
         
         self.meetups = groups;
         
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.collectionView reloadData];
+        });
+        
     }];
-     
     
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Register cell classes
-//    UINib *eventsCellNib = [UINib nibWithNibName:@"AVEventsCustomCollectionViewCell" bundle:nil];
-//    [self.collectionView registerNib:eventsCellNib forCellWithReuseIdentifier:reuseIdentifier];
-    
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -95,8 +98,7 @@ static NSString * const reuseIdentifier = @"AVEventsCustomCollectionViewCell";
     
     AVMeetupGroup *group = self.meetups[indexPath.row];
 
-    [cell.meetupGroupNameTextLabel setText:group.name];
-//    .text = group.name;
+    cell.meetupGroupNameTextLabel.text = group.name;
     
     return cell;
 }
