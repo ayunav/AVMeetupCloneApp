@@ -25,6 +25,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     
+//    self.navigationItem.title = [NSString stringWithFormat:@"%@", self.event.name];
+
     self.descLabel.text = self.event.eventDescription;
     
     self.meetupGroupImageView.clipsToBounds = YES;

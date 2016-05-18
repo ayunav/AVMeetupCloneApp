@@ -26,6 +26,8 @@ static NSString * const reuseIdentifier = @"AVEventsCustomCollectionViewCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setupNavigationBarUI];
+
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -47,6 +49,20 @@ static NSString * const reuseIdentifier = @"AVEventsCustomCollectionViewCell";
         
     }];
     
+}
+
+
+- (void)setupNavigationBarUI {
+    
+    self.navigationItem.title = @"Meetup Events Near You";
+    
+    // Meetup brand color: http://brandcolors.net/ hex value: e0393e hex to rgb: http://hex.colorrrs.com/ rgb(224,57,62)
+    
+    // http://stackoverflow.com/questions/599405/iphone-navigation-bar-title-text-color
+    
+    // my own StackOverflow answer to How can I create a UIColor from a hex string?: http://stackoverflow.com/a/33419207/5503769
+    
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:224.0/255.0 green:57.0/255.0 blue:62.0/255.0 alpha:1.0]};
 }
 
 - (void)didReceiveMemoryWarning {
