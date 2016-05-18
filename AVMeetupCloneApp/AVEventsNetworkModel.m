@@ -17,6 +17,18 @@
 
 @implementation AVEventsNetworkModel
 
++ (AVEventsNetworkModel *)sharedNetworkModel {
+    
+    static AVEventsNetworkModel *sharedNetworkModel = nil;
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedNetworkModel = [[AVEventsNetworkModel alloc] init];
+    });
+    return sharedNetworkModel;
+}
+
+
 - (void)fetchEvents:(void (^)(NSMutableArray<AVMeetupEvent *> *events))completion {
 
     self.events = [[NSMutableArray alloc] init];

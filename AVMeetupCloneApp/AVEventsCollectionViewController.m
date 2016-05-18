@@ -37,18 +37,7 @@ static NSString * const reuseIdentifier = @"AVEventsCustomCollectionViewCell";
     
     // Do any additional setup after loading the view.
 
-    AVEventsNetworkModel *networkModel = [[AVEventsNetworkModel alloc] init];
-    
-    [networkModel fetchEvents:^(NSMutableArray<AVMeetupEvent *> *events) {
-        
-        self.events = events;
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.collectionView reloadData];
-        });
-        
-    }];
-    
+    [self fetchEventsData];
 }
 
 
@@ -65,10 +54,37 @@ static NSString * const reuseIdentifier = @"AVEventsCustomCollectionViewCell";
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:224.0/255.0 green:57.0/255.0 blue:62.0/255.0 alpha:1.0]};
 }
 
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (void)fetchEventsData {
+    
+    AVEventsNetworkModel *networkModel = [AVEventsNetworkModel sharedNetworkModel];
+    
+    [networkModel fetchEvents:^(NSMutableArray<AVMeetupEvent *> *events) {
+        
+        self.events = events;
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.collectionView reloadData];
+        });
+        
+    }];
+    
+}
+
+
+- (void)pullToRefresh:(UIRefreshControl *)sender {
+   
+    [self fetchEventsData];
+    [sender endRefreshing];
+    
+}
+
 
 /*
 #pragma mark - Navigation

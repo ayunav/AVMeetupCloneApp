@@ -13,6 +13,8 @@
 
 @interface AVEventsNetworkModel : NSObject
 
++ (AVEventsNetworkModel *)sharedNetworkModel;
+
 - (void)fetchEvents:(void (^)(NSMutableArray<AVMeetupEvent *> *events))completion;
 
 @end
