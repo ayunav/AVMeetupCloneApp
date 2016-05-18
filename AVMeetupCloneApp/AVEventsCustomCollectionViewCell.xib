@@ -16,11 +16,12 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ba-5M-otT" userLabel="Image and Meetup Name Container View">
                         <rect key="frame" x="0.0" y="0.0" width="279" height="280"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_7302" translatesAutoresizingMaskIntoConstraints="NO" id="wfm-k3-rYI" userLabel="Meetup Image View">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wfm-k3-rYI" userLabel="Meetup Image View">
                                 <rect key="frame" x="0.0" y="0.0" width="279" height="280"/>
+                                <color key="backgroundColor" red="1" green="0.38876555420377956" blue="0.46228013381157962" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gq-st-91C" userLabel="Meetup Group Name Label">
-                                <rect key="frame" x="8" y="248.5" width="263" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gq-st-91C" userLabel="Meetup Event Name Label">
+                                <rect key="frame" x="8" y="259" width="263" height="18"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -84,14 +85,11 @@
             </constraints>
             <size key="customSize" width="279" height="316"/>
             <connections>
-                <outlet property="meetupGroupNameTextLabel" destination="8gq-st-91C" id="28r-MC-6hD"/>
+                <outlet property="meetupEventNameLabel" destination="8gq-st-91C" id="bng-9Q-Ekj"/>
                 <outlet property="meetupImageView" destination="wfm-k3-rYI" id="qE6-IS-m9P"/>
                 <outlet property="meetupNumberOfMembersTextLabel" destination="b2Z-EH-R06" id="e8T-po-DA3"/>
             </connections>
             <point key="canvasLocation" x="324.5" y="331"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="IMG_7302" width="2448" height="3264"/>
-    </resources>
 </document>

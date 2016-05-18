@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '5DEE1F3A6339C461EC2F2E3E0FEA7D65'
+               BlueprintIdentifier = 'BA7B73FBB26F03F62A19E540C679B8C7'
                BlueprintName = 'Pods-AVMeetupCloneApp'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-AVMeetupCloneApp.a'>

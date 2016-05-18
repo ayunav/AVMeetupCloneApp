@@ -39,7 +39,6 @@
          success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
              
              completionHandler(responseObject, nil);
-//             NSLog(@"response object in AVAPIManager is %@", responseObject);
              
          } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
              
@@ -47,9 +46,9 @@
              NSLog(@"%@", error);
              /*
              // later add to view
-             Unable to Load Groups 
+             Unable to Load events 
              A problem with the network prevented 
-              loading the available groups.
+              loading the available events.
               Please, check your network settings.
              */
          }];

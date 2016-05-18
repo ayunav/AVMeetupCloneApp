@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+
+#import "AVMeetupEvent.h"
 
 @interface AVEventDetailViewController : UIViewController
+
+@property (nonatomic, strong) AVMeetupEvent *event;
 
 @end

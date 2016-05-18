@@ -10,16 +10,16 @@
 
 @interface AVEventsNetworkModel()
 
-@property (nonatomic, strong) NSMutableArray *groups;
+@property (nonatomic, strong) NSMutableArray *events;
 
 @end
 
 
 @implementation AVEventsNetworkModel
 
-- (void)fetchEvents:(void (^)(NSMutableArray<AVMeetupGroup *> *groups))completion {
+- (void)fetchEvents:(void (^)(NSMutableArray<AVMeetupEvent *> *events))completion {
 
-    self.groups = [[NSMutableArray alloc] init];
+    self.events = [[NSMutableArray alloc] init];
     
     [AVAPIManager getOpenEventsJSON:^(id json, NSError *error) {
         
@@ -27,22 +27,26 @@
         
         for (NSDictionary *dictionary in results) {
             
-            AVMeetupGroup *group = [[AVMeetupGroup alloc] init];
+            AVMeetupEvent *event = [[AVMeetupEvent alloc] init];
             
-            NSString *groupName = dictionary[@"group"][@"name"];
-            NSURL *groupPhotoURL = dictionary[@"group"][@"group_photo"][@"photo_link"];
-            NSString *groupMembersNickname = dictionary[@"group"][@"who"];
+            NSString *eventName = dictionary[@"name"];
+            NSString *eventDescription = dictionary[@"description"];
             
-            group.name = groupName;
-            group.photoURL = groupPhotoURL;
-            group.membersNickname = groupMembersNickname;
+            NSDictionary *group = dictionary[@"group"];
+            NSDictionary *groupPhoto = group[@"group_photo"];
             
-//            NSLog(@"%@, %@, %@ ", group.name, group.photoURL, group.membersNickname); 
+            if (groupPhoto) {
+                NSURL *groupPhotoURL = groupPhoto[@"photo_link"];
+                event.groupPhotoURL = groupPhotoURL;
+            }
             
-            [self.groups addObject:group];
+            event.name = eventName;
+            event.eventDescription = eventDescription;
+
+            [self.events addObject:event];
     }
         
-        completion(self.groups);
+        completion(self.events);
         
     }];
 

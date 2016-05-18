@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-#import "AVMeetupGroup.h"
+#import "AVMeetupEvent.h"
 #import "AVAPIManager.h"
 
 @interface AVEventsNetworkModel : NSObject
 
-- (void)fetchEvents:(void (^)(NSMutableArray<AVMeetupGroup *> *groups))completion;
+- (void)fetchEvents:(void (^)(NSMutableArray<AVMeetupEvent *> *events))completion;
 
 @end

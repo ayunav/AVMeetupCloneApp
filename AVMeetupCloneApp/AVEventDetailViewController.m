@@ -10,13 +10,32 @@
 
 @interface AVEventDetailViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *meetupGroupImageView;
+@property (weak, nonatomic) IBOutlet UILabel *descLabel;
+
 @end
+
 
 @implementation AVEventDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    self.descLabel.text = self.event.eventDescription;
+    
+    self.meetupGroupImageView.clipsToBounds = YES;
+    
+    [self.meetupGroupImageView sd_setImageWithURL:self.event.groupPhotoURL
+                                   completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                                       
+                                       self.meetupGroupImageView.image = image;
+                                       
+                                   }];
+
 }
 
 - (void)didReceiveMemoryWarning {

@@ -6,19 +6,22 @@
 //  Copyright © 2016 Ayuna NYC. All rights reserved.
 //
 
-#import "AVEventsCollectionViewController.h"
-#import "AVEventsCustomCollectionViewCell.h"
 #import "AVEventsNetworkModel.h"
+#import "AVEventsCustomCollectionViewCell.h"
+#import "AVEventsCollectionViewController.h"
+#import "AVEventDetailViewController.h"
 
-@interface AVEventsCollectionViewController () 
-@property (nonatomic, strong) NSArray<AVMeetupGroup *> *meetups;
-@property (nonatomic, strong) NSArray<NSDictionary *> *meetupDictsArray;
+@interface AVEventsCollectionViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+
+@property (nonatomic, strong) NSArray<AVMeetupEvent *> *events;
 
 @end
+
 
 @implementation AVEventsCollectionViewController
 
 static NSString * const reuseIdentifier = @"AVEventsCustomCollectionViewCell";
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,9 +37,9 @@ static NSString * const reuseIdentifier = @"AVEventsCustomCollectionViewCell";
 
     AVEventsNetworkModel *networkModel = [[AVEventsNetworkModel alloc] init];
     
-    [networkModel fetchEvents:^(NSMutableArray<AVMeetupGroup *> *groups) {
+    [networkModel fetchEvents:^(NSMutableArray<AVMeetupEvent *> *events) {
         
-        self.meetups = groups;
+        self.events = events;
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.collectionView reloadData];
@@ -60,6 +63,8 @@ static NSString * const reuseIdentifier = @"AVEventsCustomCollectionViewCell";
     // Pass the selected object to the new view controller.
 }
 */
+
+
 #pragma mark - CollectionView Layout
 
 - (CGSize)collectionView:(UICollectionView *)collectionView
@@ -89,21 +94,47 @@ static NSString * const reuseIdentifier = @"AVEventsCustomCollectionViewCell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.meetups.count;
+    return self.events.count;
 }
+
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     AVEventsCustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    AVMeetupGroup *group = self.meetups[indexPath.row];
+    AVMeetupEvent *event = self.events[indexPath.row];
 
-    cell.meetupGroupNameTextLabel.text = group.name;
+    if (event.groupPhotoURL) {
+        
+        [cell.meetupImageView sd_setImageWithURL:event.groupPhotoURL
+                                       completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                                           
+                                           cell.meetupImageView.image = image;
+                                           
+                                       }];
+    }
+
+    cell.meetupEventNameLabel.text = event.name;
+    
+    // meetup date & time
     
     return cell;
 }
 
+
 #pragma mark <UICollectionViewDelegate>
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    AVEventDetailViewController *eventDetailVC = [self.storyboard instantiateViewControllerWithIdentifier:@"AVEventDetailViewController"];
+    
+    eventDetailVC.event = self.events[indexPath.row];
+    
+    [self.navigationController pushViewController:eventDetailVC animated:YES];
+
+}
+
+
 
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking

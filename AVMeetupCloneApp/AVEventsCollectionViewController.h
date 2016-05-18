@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
-@interface AVEventsCollectionViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+
+@interface AVEventsCollectionViewController : UICollectionViewController 
 
 
 @end
