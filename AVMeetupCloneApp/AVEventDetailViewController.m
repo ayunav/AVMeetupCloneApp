@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *meetupGroupImageView;
 @property (weak, nonatomic) IBOutlet UILabel *descLabel;
+@property (weak, nonatomic) IBOutlet UIWebView *eventDescriptionWebView;
 
 @end
 
@@ -38,6 +39,11 @@
                                        
                                    }];
 
+    //developer.apple.com/library/ios/documentation/UIKit/Reference/UIWebView_Class/index.html#//apple_ref/doc/uid/TP40006950-CH3-SW10
+    // http://stackoverflow.com/a/4138610/5503769
+    
+    [self.eventDescriptionWebView loadHTMLString:[self.event.eventDescription description] baseURL:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {

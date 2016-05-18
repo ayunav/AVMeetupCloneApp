@@ -20,6 +20,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xwy-YM-oI0" userLabel="Meetup Group Image View">
                                 <rect key="frame" x="0.0" y="20" width="600" height="282"/>
+                                <color key="backgroundColor" red="0.8784313725490196" green="0.22352941176470587" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Epq-hI-6RH">
                                 <rect key="frame" x="20" y="245" width="560" height="43"/>
@@ -36,7 +37,7 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xEj-Ax-5ws">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xEj-Ax-5ws" userLabel="Event Description Web View">
                                 <rect key="frame" x="20" y="310" width="560" height="282"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
@@ -78,6 +79,7 @@
                     </view>
                     <connections>
                         <outlet property="descLabel" destination="Epq-hI-6RH" id="nay-Ti-yQw"/>
+                        <outlet property="eventDescriptionWebView" destination="xEj-Ax-5ws" id="A88-Q9-QW5"/>
                         <outlet property="meetupGroupImageView" destination="xwy-YM-oI0" id="hyc-Xj-U3A"/>
                     </connections>
                 </viewController>
