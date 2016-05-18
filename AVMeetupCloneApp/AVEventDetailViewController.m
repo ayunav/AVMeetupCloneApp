@@ -11,7 +11,7 @@
 @interface AVEventDetailViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *meetupGroupImageView;
-@property (weak, nonatomic) IBOutlet UILabel *descLabel;
+@property (weak, nonatomic) IBOutlet UILabel *eventNameLabel;
 @property (weak, nonatomic) IBOutlet UIWebView *eventDescriptionWebView;
 
 @end
@@ -28,7 +28,7 @@
     
 //    self.navigationItem.title = [NSString stringWithFormat:@"%@", self.event.name];
 
-    self.descLabel.text = self.event.eventDescription;
+    self.eventNameLabel.text = self.event.name;
     
     self.meetupGroupImageView.clipsToBounds = YES;
     
