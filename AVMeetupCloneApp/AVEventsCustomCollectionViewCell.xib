@@ -21,7 +21,7 @@
                                 <color key="backgroundColor" red="0.8784313725490196" green="0.22352941176470587" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gq-st-91C" userLabel="Meetup Event Name Label">
-                                <rect key="frame" x="8" y="259" width="263" height="18"/>
+                                <rect key="frame" x="8" y="254" width="263" height="18"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -30,7 +30,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="wfm-k3-rYI" secondAttribute="trailing" id="1qz-An-ndw"/>
-                            <constraint firstAttribute="bottom" secondItem="8gq-st-91C" secondAttribute="bottom" constant="3" id="5od-aN-qKr"/>
+                            <constraint firstAttribute="bottom" secondItem="8gq-st-91C" secondAttribute="bottom" constant="8" id="5od-aN-qKr"/>
                             <constraint firstAttribute="trailing" secondItem="8gq-st-91C" secondAttribute="trailing" constant="8" id="PQj-KW-I9a"/>
                             <constraint firstItem="wfm-k3-rYI" firstAttribute="top" secondItem="9ba-5M-otT" secondAttribute="top" id="RMj-uH-gQD"/>
                             <constraint firstAttribute="bottom" secondItem="wfm-k3-rYI" secondAttribute="bottom" id="UIb-d0-ZuL"/>

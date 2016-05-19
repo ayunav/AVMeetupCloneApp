@@ -8,6 +8,7 @@
 
 #import "AVEventsNetworkModel.h"
 
+
 @interface AVEventsNetworkModel()
 
 @property (nonatomic, strong) NSMutableArray *events;
