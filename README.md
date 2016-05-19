@@ -2,6 +2,9 @@
 
 Got a free evening and have nothing to do? Check out AVMeetupCloneApp to gather some ideas and to see the list of Meetup events in the city.
 
+<img src="https://github.com/ayunav/AVMeetupCloneApp/blob/master/AVMeetupCloneApp%20Events%20View.png" width="375" height="667" />
+<img src="https://github.com/ayunav/AVMeetupCloneApp/blob/master/AVMeetupCloneApp%20Event%20Detail%20View.png" width="375" height="667" />
+
 #### Run the app
 
 Follow these steps to build and run the app via source code:
