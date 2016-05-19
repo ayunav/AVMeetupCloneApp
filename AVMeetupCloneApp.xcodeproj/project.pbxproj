@@ -47,6 +47,7 @@
 		D92389581CE7E6B6001B1B1B /* AVEventsCustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVEventsCustomCollectionViewCell.h; sourceTree = "<group>"; };
 		D92389591CE7E6B6001B1B1B /* AVEventsCustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVEventsCustomCollectionViewCell.m; sourceTree = "<group>"; };
 		D923895A1CE7E6B6001B1B1B /* AVEventsCustomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVEventsCustomCollectionViewCell.xib; sourceTree = "<group>"; };
+		D9BD28071CEE0E5C00FF98E8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +65,7 @@
 		08A6F117D6D24A26E653B5BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D9BD28071CEE0E5C00FF98E8 /* CoreLocation.framework */,
 				104535B625B35D432195F537 /* libPods-AVMeetupCloneApp.a */,
 			);
 			name = Frameworks;

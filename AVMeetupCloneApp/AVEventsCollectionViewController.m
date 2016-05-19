@@ -29,19 +29,20 @@ static NSString * const reuseIdentifier = @"AVEventsCustomCollectionViewCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Register cell classes
     [self.collectionView registerNib:[UINib nibWithNibName:@"AVEventsCustomCollectionViewCell" bundle:nil]
           forCellWithReuseIdentifier:reuseIdentifier];
 
     [self setupNavigationBarUI];
-
+    [self addUIRefreshControlToCollectionView];
+    
     [self fetchEventsData];
+    
 }
 
 
 - (void)setupNavigationBarUI {
     
-    self.navigationItem.title = @"Meetup Events Near You";
+    self.navigationItem.title = @"Meetup Events";
     
     // Meetup brand color: http://brandcolors.net/ hex value: e0393e hex to rgb: http://hex.colorrrs.com/ rgb(224,57,62)
 
@@ -57,7 +58,6 @@ static NSString * const reuseIdentifier = @"AVEventsCustomCollectionViewCell";
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
@@ -77,6 +77,17 @@ static NSString * const reuseIdentifier = @"AVEventsCustomCollectionViewCell";
     
 }
 
+#pragma mark - Pull Down To Refresh methods
+
+- (void)addUIRefreshControlToCollectionView {
+    
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(pullToRefresh:) forControlEvents:UIControlEventValueChanged];
+    [self.collectionView addSubview:refreshControl];
+    self.collectionView.alwaysBounceVertical = YES;
+
+}
+
 
 - (void)pullToRefresh:(UIRefreshControl *)sender {
    
@@ -84,17 +95,6 @@ static NSString * const reuseIdentifier = @"AVEventsCustomCollectionViewCell";
     [sender endRefreshing];
     
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 
 #pragma mark - CollectionView Layout
@@ -171,35 +171,5 @@ static NSString * const reuseIdentifier = @"AVEventsCustomCollectionViewCell";
 
 }
 
-
-
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 @end

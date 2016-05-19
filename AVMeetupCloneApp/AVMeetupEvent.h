@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *eventDescription;
-@property (nonatomic, strong) NSURL *groupPhotoURL;
 @property (nonatomic, strong) NSString *timeAndDate;
+@property (nonatomic, strong) NSURL *groupPhotoURL;
 
 @end

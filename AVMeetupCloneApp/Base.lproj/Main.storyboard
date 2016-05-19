@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Event Detail View Controller-->
@@ -106,57 +105,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kI8-Vw-hN4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-222" y="289"/>
-        </scene>
-        <!--ZipCodeVC-->
-        <scene sceneID="Our-HX-Bh4">
-            <objects>
-                <viewController title="ZipCodeVC" id="mXt-gs-OW0" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="pBy-yG-AbH"/>
-                        <viewControllerLayoutGuide type="bottom" id="iXr-mc-CS9"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Zva-e1-eli">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type in Your Zip Code or City to Search For Current Meetups" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mc7-nV-Yii">
-                                <rect key="frame" x="70" y="236" width="460" height="41"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="CSX-BA-OJs"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="CSX-BA-OJs"/>
-                                    </mask>
-                                </variation>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip Code/City" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ETm-hY-RBS">
-                                <rect key="frame" x="225" y="285" width="150" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="tHg-pr-YMw"/>
-                                    <constraint firstAttribute="height" constant="30" id="yNO-Rb-3b4"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Mc7-nV-Yii" secondAttribute="trailing" constant="50" id="56W-Mb-zHm"/>
-                            <constraint firstItem="Mc7-nV-Yii" firstAttribute="centerX" secondItem="Zva-e1-eli" secondAttribute="centerX" id="Gac-B0-Ykl"/>
-                            <constraint firstItem="Mc7-nV-Yii" firstAttribute="leading" secondItem="Zva-e1-eli" secondAttribute="leadingMargin" constant="50" id="I1u-N8-tpb"/>
-                            <constraint firstItem="ETm-hY-RBS" firstAttribute="centerY" secondItem="Zva-e1-eli" secondAttribute="centerY" id="ZWQ-oQ-dRm"/>
-                            <constraint firstItem="ETm-hY-RBS" firstAttribute="centerX" secondItem="Zva-e1-eli" secondAttribute="centerX" id="ggZ-Jp-0E4"/>
-                            <constraint firstItem="ETm-hY-RBS" firstAttribute="top" secondItem="Mc7-nV-Yii" secondAttribute="bottom" constant="8" id="sdg-KR-ANg"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qr3-0k-as2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-222" y="1002"/>
         </scene>
         <!--Events Collection View Controller-->
         <scene sceneID="G6z-z6-oZu">
