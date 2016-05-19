@@ -141,19 +141,6 @@ static NSString * const reuseIdentifier = @"AVEventsCustomCollectionViewCell";
 
     // meetup group photo
     
-    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
-    gradientLayer.frame = cell.meetupImageView.bounds;
-    
-    gradientLayer.startPoint = CGPointMake(1.0, 1.0); // dark from bottom
-    gradientLayer.endPoint = CGPointMake(1.0, 0);
-    
-    gradientLayer.colors = [NSArray arrayWithObjects:
-                       (id)[[UIColor blackColor] CGColor],
-                       (id)[[UIColor clearColor] CGColor], nil];
-    
-    [cell.meetupImageView.layer insertSublayer:gradientLayer atIndex:0];
-    
-    
     if (event.groupPhotoURL) {
         
         [cell.meetupImageView sd_setImageWithURL:event.groupPhotoURL
