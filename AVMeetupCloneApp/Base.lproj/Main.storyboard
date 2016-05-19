@@ -184,7 +184,9 @@
                             <outlet property="delegate" destination="JnG-Mn-Sue" id="nlo-7y-twF"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="Iy4-uL-8rJ"/>
+                    <navigationItem key="navigationItem" id="Iy4-uL-8rJ">
+                        <barButtonItem key="backBarButtonItem" title=" " id="fp2-tD-w5w"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="CjX-sh-Y9G" id="sDB-Hb-L7Y"/>
                     </connections>

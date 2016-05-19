@@ -12,6 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *meetupImageView;
 @property (weak, nonatomic) IBOutlet UILabel *meetupEventNameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *meetupNumberOfMembersTextLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeAndDateLabel;
 
 @end

@@ -11,6 +11,9 @@
 #import "AVEventsCollectionViewController.h"
 #import "AVEventDetailViewController.h"
 
+#define meetupBrandRedColor [UIColor colorWithRed:224.0/255.0 green:57.0/255.0 blue:62.0/255.0 alpha:1.0]
+
+
 @interface AVEventsCollectionViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) NSArray<AVMeetupEvent *> *events;
@@ -26,16 +29,11 @@ static NSString * const reuseIdentifier = @"AVEventsCustomCollectionViewCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setupNavigationBarUI];
-
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
     // Register cell classes
     [self.collectionView registerNib:[UINib nibWithNibName:@"AVEventsCustomCollectionViewCell" bundle:nil]
           forCellWithReuseIdentifier:reuseIdentifier];
-    
-    // Do any additional setup after loading the view.
+
+    [self setupNavigationBarUI];
 
     [self fetchEventsData];
 }
@@ -46,12 +44,14 @@ static NSString * const reuseIdentifier = @"AVEventsCustomCollectionViewCell";
     self.navigationItem.title = @"Meetup Events Near You";
     
     // Meetup brand color: http://brandcolors.net/ hex value: e0393e hex to rgb: http://hex.colorrrs.com/ rgb(224,57,62)
-    
+
     // http://stackoverflow.com/questions/599405/iphone-navigation-bar-title-text-color
     
     // my own StackOverflow answer to How can I create a UIColor from a hex string?: http://stackoverflow.com/a/33419207/5503769
     
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor colorWithRed:224.0/255.0 green:57.0/255.0 blue:62.0/255.0 alpha:1.0]};
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: meetupBrandRedColor};
+    [self.navigationController.navigationBar setTintColor:meetupBrandRedColor];
+
 }
 
 
@@ -136,6 +136,10 @@ static NSString * const reuseIdentifier = @"AVEventsCustomCollectionViewCell";
     
     AVMeetupEvent *event = self.events[indexPath.row];
 
+    // meetup event name
+    cell.meetupEventNameLabel.text = event.name;
+
+    // meetup group photo
     if (event.groupPhotoURL) {
         
         [cell.meetupImageView sd_setImageWithURL:event.groupPhotoURL
@@ -146,10 +150,10 @@ static NSString * const reuseIdentifier = @"AVEventsCustomCollectionViewCell";
                                        }];
     }
 
-    cell.meetupEventNameLabel.text = event.name;
+    // meetup event time & date
     
-    // meetup date & time
-    
+    cell.timeAndDateLabel.text = event.timeAndDate;
+
     return cell;
 }
 

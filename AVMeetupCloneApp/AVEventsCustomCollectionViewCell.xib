@@ -48,10 +48,10 @@
                             </mask>
                         </variation>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5P-0u-Pgl" userLabel="Members Name Container View">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5P-0u-Pgl" userLabel="Time &amp; Date Container View">
                         <rect key="frame" x="0.0" y="280" width="279" height="36"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200 Happy Coders " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2Z-EH-R06" userLabel="Meetup No. of Members Label">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2Z-EH-R06" userLabel="Event Time &amp; Date Label">
                                 <rect key="frame" x="8" y="0.0" width="263" height="36"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -87,7 +87,7 @@
             <connections>
                 <outlet property="meetupEventNameLabel" destination="8gq-st-91C" id="bng-9Q-Ekj"/>
                 <outlet property="meetupImageView" destination="wfm-k3-rYI" id="qE6-IS-m9P"/>
-                <outlet property="meetupNumberOfMembersTextLabel" destination="b2Z-EH-R06" id="e8T-po-DA3"/>
+                <outlet property="timeAndDateLabel" destination="b2Z-EH-R06" id="ECx-Z7-hsX"/>
             </connections>
             <point key="canvasLocation" x="324.5" y="331"/>
         </collectionViewCell>
