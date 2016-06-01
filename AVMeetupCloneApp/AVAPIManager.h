@@ -12,6 +12,6 @@
 
 + (AVAPIManager *)sharedAPIManager;
 
-+ (void)getOpenEventsJSON:(void(^)(id json, NSError *error))completionHandler;
+- (void)getOpenEventswithOffset:(NSUInteger)offset andReturnJSON:(void(^)(id json, NSError *error))completionHandler;
 
 @end

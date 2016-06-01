@@ -11,7 +11,6 @@
 
 @interface AVEventsNetworkModel()
 
-@property (nonatomic, strong) NSMutableArray *events;
 
 @end
 
@@ -30,11 +29,13 @@
 }
 
 
-- (void)fetchEvents:(void (^)(NSMutableArray<AVMeetupEvent *> *events))completion {
+- (void)fetchEventsWithOffset:(NSUInteger)offset andReturnEvents:(void (^)(NSMutableArray<AVMeetupEvent *> *events))completion {
 
-    self.events = [[NSMutableArray alloc] init];
+    NSMutableArray *events = [[NSMutableArray alloc] init];
     
-    [AVAPIManager getOpenEventsJSON:^(id json, NSError *error) {
+    AVAPIManager *apiManager = [AVAPIManager sharedAPIManager];
+    
+    [apiManager getOpenEventswithOffset:offset andReturnJSON:^(id json, NSError *error) {
         
         NSArray *results = [json valueForKey:@"results"];
         
@@ -75,10 +76,10 @@
             event.timeAndDate = eventTimeAndDate;
             
             
-            [self.events addObject:event];
+            [events addObject:event];
     }
         
-        completion(self.events);
+        completion(events);
         
     }];
 

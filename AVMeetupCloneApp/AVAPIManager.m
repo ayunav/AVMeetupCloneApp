@@ -29,11 +29,18 @@
 }
 
 
-+ (void)getOpenEventsJSON:(void(^)(id json, NSError *error))completionHandler {
+- (void)getOpenEventswithOffset:(NSUInteger)offset andReturnJSON:(void(^)(id json, NSError *error))completionHandler {
     
+    // "https://api.meetup.com/2/open_events?&sign=true&photo-host=public&zip=10001&fields=group_photo&page=20&offset=0&key=4131436d16334b6c5f3c2b4630685a29"
+    
+    NSString *meetupAPIURL = @"https://api.meetup.com/2/open_events?&sign=true&photo-host=public&zip=10001&fields=group_photo&page=20&offset=";
+    NSString *apiKey = @"&key=4131436d16334b6c5f3c2b4630685a29";
+    
+    NSString *apiDataURL = [NSString stringWithFormat:@"%@%lu%@", meetupAPIURL, offset,apiKey];
+
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
-    [manager GET:API_DATA_URL
+    [manager GET:apiDataURL
       parameters:nil
         progress:nil
          success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

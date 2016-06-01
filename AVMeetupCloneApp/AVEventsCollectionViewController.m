@@ -35,7 +35,8 @@ static NSString * const reuseIdentifier = @"AVEventsCustomCollectionViewCell";
     [self setupNavigationBarUI];
     [self addUIRefreshControlToCollectionView];
     
-    [self fetchEventsData];
+    self.events = [[NSArray alloc] init];
+    [self fetchEventsDataWithOffset:0];
     
 }
 
@@ -61,13 +62,14 @@ static NSString * const reuseIdentifier = @"AVEventsCustomCollectionViewCell";
 }
 
 
-- (void)fetchEventsData {
+- (void)fetchEventsDataWithOffset:(NSUInteger)offset {
     
     AVEventsNetworkModel *networkModel = [AVEventsNetworkModel sharedNetworkModel];
     
-    [networkModel fetchEvents:^(NSMutableArray<AVMeetupEvent *> *events) {
+    [networkModel fetchEventsWithOffset:offset andReturnEvents:^(NSMutableArray<AVMeetupEvent *> *events) {
         
-        self.events = events;
+        
+        self.events = [self.events arrayByAddingObjectsFromArray:events];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.collectionView reloadData];
@@ -91,7 +93,7 @@ static NSString * const reuseIdentifier = @"AVEventsCustomCollectionViewCell";
 
 - (void)pullToRefresh:(UIRefreshControl *)sender {
    
-    [self fetchEventsData];
+    [self fetchEventsDataWithOffset:0];
     [sender endRefreshing];
     
 }
@@ -154,6 +156,10 @@ static NSString * const reuseIdentifier = @"AVEventsCustomCollectionViewCell";
     // meetup event time & date
     
     cell.timeAndDateLabel.text = event.timeAndDate;
+    
+    if (indexPath.row == self.events.count) {
+        [self fetchEventsDataWithOffset:self.events.count];
+    }
 
     return cell;
 }

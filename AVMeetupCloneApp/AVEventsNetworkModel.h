@@ -15,6 +15,6 @@
 
 + (AVEventsNetworkModel *)sharedNetworkModel;
 
-- (void)fetchEvents:(void (^)(NSMutableArray<AVMeetupEvent *> *events))completion;
+- (void)fetchEventsWithOffset:(NSUInteger)offset andReturnEvents:(void (^)(NSMutableArray<AVMeetupEvent *> *events))completion;
 
 @end
