@@ -68,7 +68,6 @@ static NSString * const reuseIdentifier = @"AVEventsCustomCollectionViewCell";
     
     [networkModel fetchEventsWithOffset:offset andReturnEvents:^(NSMutableArray<AVMeetupEvent *> *events) {
         
-        
         self.events = [self.events arrayByAddingObjectsFromArray:events];
         
         dispatch_async(dispatch_get_main_queue(), ^{
