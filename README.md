@@ -13,7 +13,6 @@ Follow these steps to build and run the app via source code:
 - Run pod install in the repo root to download all the dependencies
 - Open AVMeetupCloneApp.xcworkspace
 - Build and Run
-- Let me know what you think!
 
 
 Resources used: 
@@ -21,4 +20,3 @@ Resources used:
 - [https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/)
 - [https://secure.meetup.com/meetup_api/auth/](https://secure.meetup.com/meetup_api/auth/)
 - [http://oauth.net/2/](http://oauth.net/2/)
-- other resources are mentioned and commented out within the project
