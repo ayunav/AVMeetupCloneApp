@@ -10,9 +10,6 @@
 
 #import "AVAPIManager.h"
 
-#define API_DATA_URL @"https://api.meetup.com/2/open_events?&sign=true&photo-host=public&zip=10001&fields=group_photo&page=20&offset=0&key=4131436d16334b6c5f3c2b4630685a29"
-
-
 @implementation AVAPIManager
 
 
@@ -31,10 +28,9 @@
 
 - (void)getOpenEventswithOffset:(NSUInteger)offset andReturnJSON:(void(^)(id json, NSError *error))completionHandler {
     
-    // "https://api.meetup.com/2/open_events?&sign=true&photo-host=public&zip=10001&fields=group_photo&page=20&offset=0&key=4131436d16334b6c5f3c2b4630685a29"
-    
     NSString *meetupAPIURL = @"https://api.meetup.com/2/open_events?&sign=true&photo-host=public&zip=10001&fields=group_photo&page=20&offset=";
-    NSString *apiKey = @"&key=4131436d16334b6c5f3c2b4630685a29";
+    
+    NSString *apiKey = @"&key=YOUR_API_KEY"; // INSERT YOUR API KEY INSTEAD OF YOUR_API_KEY HERE 
     
     NSString *apiDataURL = [NSString stringWithFormat:@"%@%lu%@", meetupAPIURL, offset,apiKey];
 
